@@ -6,15 +6,17 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 20:11:28 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/06 21:30:30 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:36:05 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
 # include <stddef.h>
 
+void	ft_putchar_fd(char c, int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_bzero(void *h, size_t l);
 void	*ft_calloc(size_t count, size_t size);
