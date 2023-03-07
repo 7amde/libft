@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 18:08:02 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/07 15:50:06 by ahmalman         ###   ########.fr       */
+/*   Created: 2023/03/07 15:46:08 by ahmalman          #+#    #+#             */
+/*   Updated: 2023/03/07 15:58:52 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *e, int a)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		r;
-	char	*w;
+	unsigned int i;
 
-	w = (char *)e;
-	r = 0;
-	while (w != '\0')
+	i = 0;
+	if (!s)
+		return;
+	while (s[i])
 	{
-		if (w = (char)a)
-			return (w);
-		w++;
-	}
-	return (NULL);
+		f(i, s + i);
+		i++;
+	}	
 }
