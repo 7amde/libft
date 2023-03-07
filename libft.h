@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 20:11:28 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/07 16:05:06 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:26:56 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stddef.h>
 
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putnbr_fd(int n, int fd);
