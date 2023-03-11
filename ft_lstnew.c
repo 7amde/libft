@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 17:26:14 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/09 21:23:35 by ahmalman         ###   ########.fr       */
+/*   Created: 2023/03/09 21:36:53 by ahmalman          #+#    #+#             */
+/*   Updated: 2023/03/11 20:41:29 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	i;
-	char			*str9;
+	t_list *balls;
 
-	i = 0;
-	if (!s)
+	balls = (t_list *)malloc(sizeof(t_list));
+	if (!balls)
 		return (NULL);
-	str9 = (char *)malloc (sizeof (char) * len +1);
-	if (!str9)
-		return (NULL);
-	while (i < len)
-	{
-		str9[i] = s[start];
-		i++;
-		start ++;
-	}
-	return (str9);
+	balls->content = content;
+	balls->next = NULL;
+	return (balls);
 }
+

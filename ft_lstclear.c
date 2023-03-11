@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 17:26:14 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/09 21:23:35 by ahmalman         ###   ########.fr       */
+/*   Created: 2023/03/11 21:52:30 by ahmalman          #+#    #+#             */
+/*   Updated: 2023/03/11 22:18:26 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	unsigned int	i;
-	char			*str9;
+	t_list	*back;
+	t_list	*front;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	str9 = (char *)malloc (sizeof (char) * len +1);
-	if (!str9)
-		return (NULL);
-	while (i < len)
+	front = *lst;
+	while (front)
 	{
-		str9[i] = s[start];
-		i++;
-		start ++;
+		back = front->next;
+		ft_lstdelone(front, del);
+		front = back;
 	}
-	return (str9);
+	*lst = NULL;
 }
