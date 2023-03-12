@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 20:11:28 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/11 22:57:13 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/12 21:33:55 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+void * memmove(void *dst, const void *src, size_t len);
 void	ft_putendl_fd(char *s, int fd);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
