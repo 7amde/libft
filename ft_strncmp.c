@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 21:03:23 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/09 21:24:40 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 21:02:28 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	ft_strncmp(const char *z1, const char *p2, size_t w)
 {
-	int		a;
-	char	*b;
-	char	*o;
+	int				a;
+	unsigned char	*b;
+	unsigned char	*o;
 
-	o = (char *)p2;
-	b = (char *)z1;
+	o = (unsigned char *)p2;
+	b = (unsigned char *)z1;
 	a = 0;
-	while (o[a] == b[a] && w != 0)
+	while (o[a] && b[a] && o[a] == b[a] && w != 0)
 	{
 		a++;
 		w--;
 	}
 	if (w != 0)
-		return (o[a] - b[a]);
+		return (b[a] - o[a]);
 	return (0);
 }

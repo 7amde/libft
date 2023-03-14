@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 19:08:14 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/11 22:20:40 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 22:42:20 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_itoa(int num)
 	int				i;
 	char			*s;
 	int				k;
-	unsigned int	j;
+	long int		j;
 
 	j = num;
 	k = longlongmannnnnnn(num);

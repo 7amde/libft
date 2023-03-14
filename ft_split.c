@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 21:08:30 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/09 21:44:59 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 22:38:17 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,12 @@ char	**ft_split(char const *s, char c)
 	h = 0;
 	n = -1;
 	i = 0;
+	if (!s)
+		return (NULL);
 	t = strs(s, c);
 	str = (char **)malloc(sizeof(char *) * t + 1);
+	if (!str)
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c && s[i] != '\0')
@@ -59,6 +63,8 @@ char	**ft_split(char const *s, char c)
 			m++;
 		}
 		str[n] = (char *)malloc(sizeof(char) * m + 1);
+		if (!str[n])
+			return (NULL);
 		h = 0;
 		while (h < m)
 		{
@@ -70,6 +76,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		m = 0;
 	}
+	str[t] = 0;
 	return (str);
 }
 
@@ -77,7 +84,7 @@ char	**ft_split(char const *s, char c)
 // {
 // 	int i = 0;
 // 	char ** monkey;
-// 	monkey = ft_split("y    a     b    df   g", ' ');
+// 	monkey = ft_split("      split       this for   me  !       ", ' ');
 // 	while (monkey[i])
 // 	{
 // 		printf ("%s\n", monkey[i]);

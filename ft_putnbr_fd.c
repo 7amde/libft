@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:37:54 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/07 15:43:06 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:25:02 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
-		ft_putstr_fd(-2147483648, fd);
+		ft_putstr_fd("-2147483648", fd);
 	}
 	else if (n < 0)
 	{

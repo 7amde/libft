@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 22:23:32 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/08 20:49:04 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:23:14 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *h, size_t l)
 {
-	int	c;
+	size_t	c;
 
 	c = 0;
 	while (c < l)

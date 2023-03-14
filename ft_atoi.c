@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 00:55:47 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/09 21:30:49 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:11:24 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_atoi(const char *str)
 		n++;
 	if (str[n] == '-' || str[n] == '+')
 	{
-		if (str[n] == '-' )
-		h *= -1;
+		if (str[n] == '-')
+			h *= -1;
 		n++;
 	}
 	while (str[n] >= 48 && str[n] <= 57)

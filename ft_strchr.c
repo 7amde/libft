@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 18:08:02 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/09 21:28:33 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:45:16 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strchr(const char *e, int a)
 	char	*w;
 
 	w = (char *)e;
-	while (w != '\0')
+	while (*w != (char)a)
 	{
-		if (w == (char)a)
-			return (w);
+		if (!*w)
+			return (NULL);
 		w++;
 	}
-	return (NULL);
+	return (w);
 }
