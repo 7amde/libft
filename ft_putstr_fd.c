@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:49:11 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/13 22:44:11 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/03/14 23:29:33 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr_fd(char *s, int fd)
 
 	i = 0;
 	if (!s)
-		return;
+		return ;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);

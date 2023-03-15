@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 21:42:17 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/03/13 20:39:59 by ahmalman         ###   ########.fr       */
+/*   Created: 2023/03/14 23:27:29 by ahmalman          #+#    #+#             */
+/*   Updated: 2023/03/14 23:27:42 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		r;
+	int				r;
 	unsigned char	*h;
 	unsigned char	*x;
 
