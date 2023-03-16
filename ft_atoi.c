@@ -15,8 +15,8 @@
 int	ft_atoi(const char *str)
 {
 	unsigned int	o;
-	int				n;
-	int				h;
+	int		n;
+	int		h;
 
 	h = 1;
 	o = 0;
@@ -31,6 +31,10 @@ int	ft_atoi(const char *str)
 	}
 	while (str[n] >= 48 && str[n] <= 57)
 	{
+		if (h == - 1 &&((o * h) <= INT_MIN / 10))
+			return (0);'
+		if (o > INT_MAX / 10)
+			returen (-1);
 		o = (str[n] - 48) + (o * 10);
 		n++;
 	}
