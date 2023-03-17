@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"libc.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"locale": "c"
 	}
 }
